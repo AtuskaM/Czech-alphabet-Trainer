@@ -1,22 +1,35 @@
 <!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Česká abeceda • RDM Language Studio</title><link rel="stylesheet" href="style.css"><style>
-/* Mascot header size: matched to the Verb Trainer proportions */
+/* Desktop: title on the left, mascot on the right */
+header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 32px !important;
+}
+header .header-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
 header .alphabet-mascot {
-  width: clamp(280px, 25vw, 390px) !important;
-  max-width: 32% !important;
+  display: block !important;
+  width: clamp(260px, 25vw, 360px) !important;
+  max-width: 36% !important;
   height: auto !important;
   object-fit: contain;
   flex: 0 0 auto;
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
+  header { gap: 14px !important; }
   header .alphabet-mascot {
-    width: clamp(170px, 36vw, 260px) !important;
-    max-width: 40% !important;
+    width: clamp(130px, 30vw, 210px) !important;
+    max-width: 36% !important;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 480px) {
+  header { align-items: flex-start !important; }
   header .alphabet-mascot {
-    width: 150px !important;
-    max-width: 42% !important;
+    width: 120px !important;
+    max-width: 34% !important;
   }
 }
 </style></head><body><main><header><div class="header-text"><small>RDM LANGUAGE STUDIO · 01</small><h1>Česká abeceda</h1><p id="subtitle"></p></div><img class="alphabet-mascot" src="mascot-alphabet.png" alt="Modrý maskot skládá česká písmena"></header><div class="toolbar"><label id="modeLabel" for="mode"></label><select id="mode"><option value="easy">Easy · Česky + English</option><option value="normal">Normální · Česky</option></select></div><nav id="nav"></nav><section id="view"></section><footer id="foot"></footer></main><script src="data.js"></script><script src="audio-map.js"></script><script src="app.js"></script></body></html>
