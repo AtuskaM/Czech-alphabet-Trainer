@@ -1,1 +1,22 @@
-<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Česká abeceda • RDM Language Studio</title><link rel="stylesheet" href="style.css"></head><body><main><header><div class="header-text"><small>RDM LANGUAGE STUDIO · 01</small><h1>Česká abeceda</h1><p id="subtitle"></p></div><img class="alphabet-mascot" src="mascot-alphabet.png" alt="Modrý maskot skládá česká písmena"></header><div class="toolbar"><label id="modeLabel" for="mode"></label><select id="mode"><option value="easy">Easy · Česky + English</option><option value="normal">Normální · Česky</option></select></div><nav id="nav"></nav><section id="view"></section><footer id="foot"></footer></main><script src="data.js"></script><script src="audio-map.js"></script><script src="app.js"></script></body></html>
+<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Česká abeceda • RDM Language Studio</title><link rel="stylesheet" href="style.css"><style>
+/* Mascot header size: matched to the Verb Trainer proportions */
+header .alphabet-mascot {
+  width: clamp(280px, 25vw, 390px) !important;
+  max-width: 32% !important;
+  height: auto !important;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+@media (max-width: 800px) {
+  header .alphabet-mascot {
+    width: clamp(170px, 36vw, 260px) !important;
+    max-width: 40% !important;
+  }
+}
+@media (max-width: 520px) {
+  header .alphabet-mascot {
+    width: 150px !important;
+    max-width: 42% !important;
+  }
+}
+</style></head><body><main><header><div class="header-text"><small>RDM LANGUAGE STUDIO · 01</small><h1>Česká abeceda</h1><p id="subtitle"></p></div><img class="alphabet-mascot" src="mascot-alphabet.png" alt="Modrý maskot skládá česká písmena"></header><div class="toolbar"><label id="modeLabel" for="mode"></label><select id="mode"><option value="easy">Easy · Česky + English</option><option value="normal">Normální · Česky</option></select></div><nav id="nav"></nav><section id="view"></section><footer id="foot"></footer></main><script src="data.js"></script><script src="audio-map.js"></script><script src="app.js"></script></body></html>
